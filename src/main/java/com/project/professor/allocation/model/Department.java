@@ -2,16 +2,16 @@ package com.project.professor.allocation.model;
 
 public class Department {
 	private Long id;
-	private String nome;
+	private String name;
 
 	public Department() {
 		super();
 	}
 
-	public Department(Long id, String nome) {
+	public Department(Long id, String name) {
 		super();
 		this.id = id;
-		this.nome = nome;
+		this.name = name;
 	}
 
 	public Long getId() {
@@ -23,11 +23,11 @@ public class Department {
 	}
 
 	public String getNome() {
-		return nome;
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNome(String name) {
+		this.name = name;
 	}
 
 }

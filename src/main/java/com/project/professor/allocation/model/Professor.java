@@ -4,7 +4,7 @@ public class Professor {
 	
 	private Long id;
 	private String cpf;
-	private String Name;
+	private String name;
 	
 	public Professor() {
 		super();
@@ -14,7 +14,7 @@ public class Professor {
 		super();
 		this.id = id;
 		this.cpf = cpf;
-		Name = name;
+		this.name = name;
 	}
 
 	public Long getId() {
@@ -34,10 +34,10 @@ public class Professor {
 	}
 
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 }
