@@ -1,9 +1,12 @@
 package com.project.professor.allocation.model;
 
 import java.sql.Time;
+import java.time.DayOfWeek;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,8 +20,9 @@ public class Allocation {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@Enumerated(value = EnumType.STRING)
 	@Column(name = "name", nullable = false, unique = true)
-	private String day;
+	private DayOfWeek day;
 	
 	@Column(nullable = false, columnDefinition = "TIME")
 	private Time end;
@@ -30,7 +34,7 @@ public class Allocation {
 		super();
 	}
 
-	public Allocation(Long id, String day, Time end, Time start) {
+	public Allocation(Long id, DayOfWeek day, Time end, Time start) {
 		super();
 		this.id = id;
 		this.day = day;
@@ -46,11 +50,11 @@ public class Allocation {
 		this.id = id;
 	}
 
-	public String getDay() {
+	public DayOfWeek getDay() {
 		return day;
 	}
 
-	public void setDay(String day) {
+	public void setDay(DayOfWeek day) {
 		this.day = day;
 	}
 
